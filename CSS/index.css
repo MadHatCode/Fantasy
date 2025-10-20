@@ -1,0 +1,52 @@
+/* Video Background */
+
+.video {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.video video {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Apresentacao */
+
+.Apresentacao {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: -40px;
+    background-color: #8B4513;
+}
+
+.AprBG {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudorole {
+    display: block;
+    width: 550px;
+    text-align: center;
+    color: #f7f6f2; 
+}
+
+@media only screen and (max-width: 375px) {
+    
+    .conteudorole {
+    width: 300px;
+    }
+
+}
