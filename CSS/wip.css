@@ -1,0 +1,83 @@
+/* Divisoria */
+
+.divisoria{
+    text-align: center;
+    width: 100%;
+    margin-top: -16px;
+}
+
+/* Background */
+
+.background{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.box {
+  position: relative;
+  display: grid;
+  place-items: center; /* centraliza o conteúdo */
+  padding: 0;
+  min-height: inherit; /* acompanha a altura da .background */
+}
+
+.box-img {
+  position: absolute;
+  inset: 0;
+  background: url('../img/bg1.jpg') no-repeat center center;
+  background-size: cover;
+  z-index: 0;
+}
+
+/* Regras */
+
+.regras{
+    padding: 70px 70px;
+    margin: 0 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.conteudoregras{
+    max-width: 1500px;
+    width: 98%;
+    color: white;
+    text-align: center;
+    padding: 40px 60px;
+    background-color: #8B4513;
+    border-radius: 20px;
+}
+
+/* Notebook */
+
+@media only screen and (max-width: 1024px) {
+
+    .box{
+        height: 693px;
+    }
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 430px) {
+
+    h1{
+        font-size: 18px;
+    }
+
+    h3{
+		font-size: 45px;
+	}
+
+    .box{
+        height: 550px;
+        padding: 0;
+    }
+
+    .regras{        
+        padding: 20px 0;
+        margin: 10px; 
+    }
+}
