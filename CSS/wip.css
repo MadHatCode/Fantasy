@@ -54,30 +54,34 @@
 
 @media only screen and (max-width: 1024px) {
 
-    .box{
-        height: 693px;
+    .regras{        
+    padding: 20px 0;
+    margin: 10px;
     }
+
+    .conteudoregras{
+    padding: 20px 10px;
+    border-radius: 10px;
+    }
+
 }
 
 /* Mobile */
 
 @media only screen and (max-width: 430px) {
 
-    h1{
-        font-size: 18px;
-    }
-
-    h3{
-		font-size: 45px;
-	}
-
-    .box{
-        height: 550px;
-        padding: 0;
-    }
-
     .regras{        
-        padding: 20px 0;
-        margin: 10px; 
+    padding: 20px 0;
+    margin: 10px;
     }
+
+    .conteudoregras{
+    padding: 20px 10px;
+    border-radius: 10px;
+    }
+
+    .conteudoregras h1 {
+    font-size: 25px;    
+    }
+
 }

@@ -305,7 +305,22 @@ header .container {
     color: #826334;
 }
 
+@media only screen and (max-width: 1280px) {
+
+    .content {
+    padding-top: 400px;
+    }
+}
+
 @media only screen and (max-width: 1024px) {
+
+    .container {
+    display: none;
+    }
+
+    header .logo {
+    height: 3.5em;
+    }
 
     .menu-lines {
     display: block;
@@ -318,10 +333,6 @@ header .container {
     .menu-faketrigger {
     display: block;
     } 
-
-    .container {
-    display: none;
-    }
 
     .container ul {
     display: grid;
@@ -330,15 +341,40 @@ header .container {
     text-align: center;
     padding: 20px;
     }
-
-    header .container {
-    padding: 0px 120px;
-    }
   
     header .container li {
     margin: 0;                    
     }
 
+    .container h2 {   
+    font-size: 25px;
+    } 
+
+    header .container {
+    width: 100%;
+    text-align: center;             
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;                  
+    padding-top: 50px;             
+    }
+
+    .banner {
+    width: 100%;
+    height: 75vh; /* px se quiser mover de outras formas */
+    background-image: url(../img/bg0.jpg);
+    background-size: cover;
+    background-position: center top; /* onde ta TOP pode usar % */
+    }
+
+    .content {
+    padding-top: 520px;
+    }
+
+    .content h1{
+    font-size: 30px;
+    }
 }
 
 @media only screen and (max-width: 430px) {
@@ -346,10 +382,6 @@ header .container {
     header .logo {
     height: 3.5em;
     }
-
-    .menu-faketrigger {
-    display: block;
-    } 
 
     .menu-lines {
     display: block;
@@ -359,25 +391,25 @@ header .container {
     display: block;
     }
 
-    .container {
-    display: none;
-    }
+    .menu-faketrigger {
+    display: block;
+    } 
 
     .container ul {
-    flex-direction: column;         
-    justify-content: flex-start;                       
-    list-style: none;
-    padding: 0;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.1px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;                    
+    text-align: center;
+    padding: 20px;
+    }
+  
+    header .container li {
+    margin: 0;                    
     }
 
     .container h2 {   
-    font-size: 20px;
-    }
+    font-size: 25px;
+    } 
 
     header .container {
     width: 100%;
@@ -386,9 +418,25 @@ header .container {
     top: 0;
     left: 0;
     height: 100vh;                  
-    padding-top: 100px;             
+    padding-top: 50px;             
     }
-       
+
+    .banner {
+    width: 100%;
+    height: 75vh; /* px se quiser mover de outras formas */
+    background-image: url(../img/bg0.jpg);
+    background-size: cover;
+    background-position: center top; /* onde ta TOP pode usar % */
+    }
+
+    .content {
+    padding-top: 520px;
+    }
+
+    .content h1{
+    font-size: 30px;
+    }
+   
     .footer-logo {
     width: 80px;
     margin-left: -15px;
@@ -406,5 +454,4 @@ header .container {
     .footer .privacy-link {
     font-size: 0.6rem;  
     }
-
 }
