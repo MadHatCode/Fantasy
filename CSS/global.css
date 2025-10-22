@@ -185,7 +185,7 @@ header .container {
 .banner {
   width: 100%;
   height: 60vh; /* px se quiser mover de outras formas */
-  background-image: url(../img/bg6.jpg);
+  background-image: url(../img/bg0.jpg);
   background-size: cover;
   background-position: center top; /* onde ta TOP pode usar % */
 }
