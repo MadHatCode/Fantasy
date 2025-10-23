@@ -20,7 +20,7 @@
 
 .background {
     width: 100%;
-    min-height: 160vh;
+    min-height: 170vh;
     position: relative;
     overflow: hidden;
 }
@@ -171,7 +171,7 @@
     }
 
     .background {
-    min-height: 245vh;
+    min-height: 250vh;
     }
 
 }
@@ -187,7 +187,7 @@
     }
 
     .background {
-    min-height: 150vh;
+    min-height: 160vh;
     }
 
 }
@@ -208,7 +208,7 @@
     }
 
     .background {
-    min-height: 175vh;
+    min-height: 180vh;
     }
 
     .hero {
@@ -235,7 +235,7 @@
     }
 
     .background {
-    min-height: 320vh;
+    min-height: 330vh;
     }
 
 }
