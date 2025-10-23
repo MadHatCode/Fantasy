@@ -186,8 +186,6 @@
 
 @media only screen and (max-width: 1024px) {
 
-
-
     .box-img {
     grid-template-columns: repeat(2, 400px);
     }
