@@ -158,29 +158,35 @@
     color: #fff;
 }
 
-/* Notebook */
+/* Resolucao */
 
-@media only screen and (max-width: 1280px) {
-
-    .box {
-        height: 693px;
-    }
+@media only screen and (max-width: 1366px) {
 
     .box-img {
     grid-template-columns: repeat(2, 400px); /* colunas, largura dos cards */
     }
 
     .background {
-    min-height: 250vh;
+    min-height: 280vh;
+    }
+
+}
+
+@media only screen and (max-width: 1280px) {
+
+    .box-img {
+    grid-template-columns: repeat(2, 400px); /* colunas, largura dos cards */
+    }
+
+    .background {
+    min-height: 280vh;
     }
 
 }
 
 @media only screen and (max-width: 1024px) {
 
-    .box {
-        height: 693px;
-    }
+
 
     .box-img {
     grid-template-columns: repeat(2, 400px);

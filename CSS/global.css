@@ -305,10 +305,17 @@ header .container {
     color: #826334;
 }
 
+@media only screen and (max-width: 1366px) {
+
+    .content {
+    padding-top: 350px;
+    }
+}
+
 @media only screen and (max-width: 1280px) {
 
     .content {
-    padding-top: 400px;
+    padding-top: 370px;
     }
 }
 
