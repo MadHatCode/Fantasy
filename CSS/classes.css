@@ -20,7 +20,7 @@
 
 .background {
     width: 100%;
-    min-height: 150vh;
+    min-height: 145vh;
     position: relative;
     overflow: hidden;
 }
@@ -35,24 +35,17 @@
 
 .box-img {
     position: absolute;
-    /* mantém como layer de fundo */
     inset: 0;
-    background: url('../img/bg1.jpg') no-repeat center center;
+    background: url('../img/bg1.png') no-repeat center center;
     background-size: cover;
     z-index: 0;
 
-    /* grid apenas para organizar os filhos */
-    display: grid;
-    grid-template-columns: repeat(2, 400px);
-    /* 2 colunas (largura fixa dos cards) */
-    justify-content: center;
-    /* centraliza horizontalmente o grid */
-    align-content: center;
-    /* centraliza verticalmente dentro da área */
-    gap: 40px;
-    /* espaçamento entre cards */
-    padding: 0;
-    /* não “empurra” o fundo */
+    display: grid; /* grid apenas para organizar os filhos */
+    grid-template-columns: repeat(3, 400px); /* 2 colunas (largura fixa dos cards)*/
+    justify-content: center; /* centraliza horizontalmente o grid */
+    align-content: center; /* centraliza verticalmente dentro da área */
+    gap: 40px; /* espaçamento entre cards */
+    padding: 0; /* não “empurra” o fundo */
 }
 
 /* Card */
@@ -86,19 +79,35 @@
 }
 
 .first .hero-description-bk {
-    background-image: linear-gradient(0deg, #d3891b, #b61d3b);
+    background-image: linear-gradient(0deg, #d3891b, #004d81);
 }
 
 .second .hero-description-bk {
-    background-image: linear-gradient(0deg, #cc831d, #b6af51);
+    background-image: linear-gradient(0deg, #d3891b, #008141);
 }
 
 .third .hero-description-bk {
-    background-image: linear-gradient(0deg, #3f5efb, #fc466b);
+    background-image: linear-gradient(0deg, #d3891b, #c23d00);
 }
 
 .fourth .hero-description-bk {
-    background-image: linear-gradient(0deg, #b6843e, #ceb31b)
+    background-image: linear-gradient(0deg, #d3891b, #a18900)
+}
+
+.fifth .hero-description-bk {
+    background-image: linear-gradient(0deg, #d3891b, #4b00a1)
+}
+
+.sixth .hero-description-bk {
+    background-image: linear-gradient(0deg, #d3891b, #1b8800)
+}
+
+.seventh .hero-description-bk {
+    background-image: linear-gradient(0deg, #d3891b, #9e001a)
+}
+
+.eighth .hero-description-bk {
+    background-image: linear-gradient(0deg, #d3891b, #1b8800)
 }
 
 .hero-logo {
@@ -121,7 +130,7 @@
     position: absolute;
     color: #fff;
     font-weight: 900;
-    left: 150px;
+    left: 200px;
     bottom: 26%;
 }
 
@@ -130,6 +139,10 @@
     color: #fff;
     left: 30px;
     bottom: 10%;
+}
+
+.hero-date h1 {
+    font-size: 18px;
 }
 
 .hero-btn {
@@ -147,21 +160,61 @@
 
 /* Notebook */
 
+@media only screen and (max-width: 1280px) {
+
+    .box {
+        height: 693px;
+    }
+
+    .box-img {
+    grid-template-columns: repeat(2, 400px); /* colunas, largura dos cards */
+    }
+
+    .background {
+    min-height: 245vh;
+    }
+
+}
+
 @media only screen and (max-width: 1024px) {
 
     .box {
         height: 693px;
     }
+
+    .box-img {
+    grid-template-columns: repeat(2, 400px);
+    }
+
+    .background {
+    min-height: 150vh;
+    }
+
 }
 
 @media (max-width: 768px) {
-    .box-img {
-        grid-template-columns: 400px;
-        /* 1 coluna */
-        align-content: start;
-        /* evita “apertar” verticalmente */
-        gap: 30px;
+
+    h1 {
+        font-size: 18px;
     }
+
+    h3 {
+        font-size: 45px;
+    }
+
+    .box-img {
+        grid-template-columns: repeat(1, 400px);
+        gap: 0px;
+    }
+
+    .background {
+    min-height: 175vh;
+    }
+
+    .hero {
+    margin: 0px 0px 20px 0px;
+    }
+
 }
 
 /* Mobile */
@@ -176,13 +229,13 @@
         font-size: 45px;
     }
 
-    .box {
-        height: 550px;
-        padding: 0;
+    .box-img {
+        grid-template-columns: repeat(1, 400px);
+        gap: 0px;
     }
 
-    .regras {
-        padding: 20px 0;
-        margin: 10px;
+    .background {
+    min-height: 320vh;
     }
+
 }
