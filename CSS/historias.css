@@ -1,233 +1,206 @@
-/* Divisoria */
-
-.divisoria{
-    text-align: center;
-    width: 100%;
-    margin-top: -16px;
-}
-
 /* Background */
 
-.background{
+.background {
     width: 100%;
     min-height: 100vh;
     position: relative;
     overflow: hidden;
 }
 
+.divisoria {
+    position: absolute;
+    top: 0px;           /* ajuste a altura onde ela deve ficar */
+    left: 50%;
+    transform: translateX(-50%); /* centraliza horizontalmente */
+    width: 100%;           /* largura da linha */
+    z-index: 10;          /* fica acima do fundo */
+}
+
+.divisoria hr {
+    width: 100%;
+    border: none;
+    border-top: 2px solid #C0C0C0;
+    margin: 0;
+}
+
 .box {
-  position: relative;
-  display: grid;
-  place-items: center; /* centraliza o conteúdo */
-  padding: 0;
-  min-height: inherit; /* acompanha a altura da .background */
+    position: relative;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    min-height: inherit;
 }
 
 .box-img {
-  position: absolute;
-  inset: 0;
-  background: url('../img/bg1.jpg') no-repeat center center;
-  background-size: cover;
-  z-index: 0;
+    position: absolute;
+    inset: 0;
+    background: url('../img/bg1.png') no-repeat center center;
+    background-size: cover;
+    z-index: 0;
+
+    display: grid; /* grid apenas para organizar os filhos */
+    grid-template-columns: repeat(3, 400px); /* 2 colunas (largura fixa dos cards)*/
+    justify-content: center; /* centraliza horizontalmente o grid */
+    align-content: center; /* centraliza verticalmente dentro da área */
+    gap: 0px; /* espaçamento entre cards */
+    padding: 0; /* não “empurra” o fundo */
 }
 
 /* Book */
 
-a {
-  text-decoration: none;
-}
-
-.bookcontainer {
-  width:100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
 .book {
-  width: 225px;
-  height: 350px;
-  position:relative;
-  text-align: center;
-  margin:2.5%;
+    width: 300px;
+    height: 425px;
+    position: relative;
+    text-align: center;
+    margin: 2.5%;
+    margin-left: 50px;
 }
 
 .book-cover {
-  position: absolute;
-  z-index:1;
-  width: 100%;
-  height: 100%;
-  transform-origin: 0 50%;
-  -webkit-transform-origin: 0 50%;
-  background: #111;
-  background-size:cover;
-  border-radius: 3px;
-  box-shadow: 
-    inset 4px 1px 3px #ffffff60,
-    inset 0 -1px 2px #00000080;
-  transition: all .5s ease-in-out;
-  -webkit-transition: all .5s ease-in-out;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    transform-origin: 0 50%;
+    -webkit-transform-origin: 0 50%;
+    background: #111;
+    background-size: cover;
+    border-radius: 3px;
+    box-shadow:
+        inset 4px 1px 3px #ffffff60,
+        inset 0 -1px 2px #00000080;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
 }
 
 .cover1 {
-  background: url('http://fuel-design.com/media/uploads/publications/Soviet_Space_Dogs_cover.jpg');
+    background: url('../img/liv1.png');
 }
 
 .cover2 {
-  background: url('http://fuel-design.com/media/uploads/publications/Tattoo_Vol_I_cover.jpg');
+    background: url('../img/liv2.png');
 }
 
 .cover3 {
-  background: url('http://fuel-design.com/media/uploads/publications/CRIME_cover.jpg');
+    background: url('../img/liv3.png');
 }
 
 .book .book-cover {
-  background-size: 100% 100%;
+    background-size: 100% 100%;
 }
 
-
 .effect {
-  width: 20px;
-  height: 100%;
-  margin-left: 10px;
-  border-left: 2px solid #00000010;
-  background-image: linear-gradient(90deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%);
-  transition: all .5s ease;
+    width: 20px;
+    height: 100%;
+    margin-left: 10px;
+    border-left: 2px solid #00000010;
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+    transition: all .5s ease;
 }
 
 .light {
-  width: 90%;
-  height: 100%;
-  position: absolute;
-  border-radius: 3px; 
-  background-image: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 100%);
-  top: 0;
-  right:0;
-  opacity: .1;
-  transition: all .5s ease;
-  -webkit-transition: all .5s ease;
+    width: 90%;
+    height: 100%;
+    position: absolute;
+    border-radius: 3px;
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 100%);
+    top: 0;
+    right: 0;
+    opacity: .1;
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
 }
 
-.book:hover { cursor:pointer; }
+.book:hover {
+    cursor: pointer;
+}
 
 .book:hover .book-cover {
-  transform: perspective(2000px) rotateY(-30deg);
-  -webkit-transform: perspective(2000px) rotateY(-30deg);
-  transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
-  box-shadow: 
+    transform: perspective(2000px) rotateY(-30deg);
+    -webkit-transform: perspective(2000px) rotateY(-30deg);
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    box-shadow:
     inset 4px 1px 3px #ffffff60,
     inset 0 -1px 2px #00000080,
     10px 0px 10px -5px #00000030
 }
 
 .book:hover .effect {
-  width: 40px;
- /** margin-left:13px;
-  opacity: 0.5; **/
+    width: 40px;
 }
 
 .book:hover .light {
-  opacity: 1;
-  width: 70%;
+    opacity: 1;
+    width: 70%;
 }
 
-.book-inside{
-  width: calc(100% - 2px);
-  height:96%;
-  position:relative;
-  top: 2%;
-  border: 1px solid grey;
-  border-radius:3px;
-  background: white;
-  box-shadow: 
-  10px 40px 40px -10px #00000030,
-  inset -2px 0 0 grey,
-  inset -3px 0 0 #dbdbdb,
-  inset -4px 0 0 white,
-  inset -5px 0 0 #dbdbdb,
-  inset -6px 0 0 white,
-  inset -7px 0 0 #dbdbdb,
-  inset -8px 0 0 white,
-  inset -9px 0 0 #dbdbdb;
-}
-
-.title {
-  font-size:22px;
-  width: 100%;
-  color: #333;
-  text-align: center;
-  position: absolute;
-  top:-30px;
-  height: 1px;
-  display: flex;
-  align-items: flex-end;
-  opacity: 0;
-  transition: all 1s ease-in-out;
-  -webkit-transition: all 1s ease-in-out;
-}
-
-.title p {
-  width: 100%;
-  margin:0;
-  line-height:1.3;
+.book-inside {
+    width: calc(100% - 2px);
+    height: 96%;
+    position: relative;
+    top: 2%;
+    border: 1px solid grey;
+    border-radius: 3px;
+    background: white;
+    box-shadow:
+        10px 40px 40px -10px #00000030,
+        inset -2px 0 0 grey,
+        inset -3px 0 0 #dbdbdb,
+        inset -4px 0 0 white,
+        inset -5px 0 0 #dbdbdb,
+        inset -6px 0 0 white,
+        inset -7px 0 0 #dbdbdb,
+        inset -8px 0 0 white,
+        inset -9px 0 0 #dbdbdb;
 }
 
 
-.btn {
-  position:relative;
-  background: #aaa;
-  color: #fff;
-  font-weight: bold;
-  padding: 15px 30px;
-  font-size: 16px;
-  letter-spacing:1px;
-  border-radius: 50px;
-  bottom: -50px;
-  display: inline-block;
-  opacity: 0;
-  transition: all 1s ease-in-out;
-  -webkit-transition: all 1s ease-in-out;
+/* Resolucao */
+
+@media only screen and (max-width: 1366px) {
+
+    .background {
+    min-height: 140vh;
+    }
+
 }
-
-.book:hover .btn, .book:hover .title {
-  opacity: 1;
-}
-
-
-
-
-
-/* Notebook */
 
 @media only screen and (max-width: 1024px) {
 
-    .box{
-        height: 693px;
+    .box-img {
+    grid-template-columns: repeat(2, 400px);
     }
+
 }
 
-/* Mobile */
+@media (max-width: 768px) {
+
+    .box-img {
+        grid-template-columns: repeat(1, 400px);
+        gap: 0px;
+    }
+
+    .background {
+    min-height: 180vh;
+    }
+
+    .hero {
+    margin: 0px 0px 20px 0px;
+    }
+
+}
 
 @media only screen and (max-width: 430px) {
 
-    h1{
-        font-size: 18px;
+    .box-img {
+        grid-template-columns: repeat(1, 400px);
+        gap: 0px;
     }
 
-    h3{
-		font-size: 45px;
-	}
-
-    .box{
-        height: 550px;
-        padding: 0;
+    .background {
+    min-height: 200vh;
     }
 
-    .regras{        
-        padding: 20px 0;
-        margin: 10px; 
-    }
 }

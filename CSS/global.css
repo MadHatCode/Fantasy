@@ -305,6 +305,8 @@ header .container {
     color: #826334;
 }
 
+/* Resolucao */
+
 @media only screen and (max-width: 1366px) {
 
     .content {
