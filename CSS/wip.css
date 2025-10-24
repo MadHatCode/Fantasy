@@ -1,34 +1,48 @@
-/* Divisoria */
-
-.divisoria{
-    text-align: center;
-    width: 100%;
-    margin-top: -16px;
-}
-
 /* Background */
 
-.background{
+.background {
     width: 100%;
-    min-height: 100vh;
+    min-height: 80vh;
     position: relative;
     overflow: hidden;
 }
 
+.divisoria {
+    position: absolute;
+    top: 0px;           /* ajuste a altura onde ela deve ficar */
+    left: 50%;
+    transform: translateX(-50%); /* centraliza horizontalmente */
+    width: 100%;           /* largura da linha */
+    z-index: 10;          /* fica acima do fundo */
+}
+
+.divisoria hr {
+    width: 100%;
+    border: none;
+    border-top: 2px solid #C0C0C0;
+    margin: 0;
+}
+
 .box {
-  position: relative;
-  display: grid;
-  place-items: center; /* centraliza o conteúdo */
-  padding: 0;
-  min-height: inherit; /* acompanha a altura da .background */
+    position: relative;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    min-height: inherit;
 }
 
 .box-img {
-  position: absolute;
-  inset: 0;
-  background: url('../img/bg1.jpg') no-repeat center center;
-  background-size: cover;
-  z-index: 0;
+    position: absolute;
+    inset: 0;
+    background: url('../img/bg1.png') no-repeat center center;
+    background-size: cover;
+    z-index: 0;
+
+    display: grid; /* grid apenas para organizar os filhos */
+    justify-content: center; /* centraliza horizontalmente o grid */
+    align-content: center; /* centraliza verticalmente dentro da área */
+    gap: 0px; /* espaçamento entre cards */
+    padding: 0; /* não “empurra” o fundo */
 }
 
 /* Regras */
@@ -42,7 +56,7 @@
 
 .conteudoregras{
     max-width: 1500px;
-    width: 98%;
+    width: 100%;
     color: white;
     text-align: center;
     padding: 40px 60px;
