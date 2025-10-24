@@ -1,0 +1,148 @@
+/* Background */
+
+.background {
+    width: 100%;
+    min-height: 500vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.divisoria {
+    position: absolute;
+    top: 0px;           /* ajuste a altura onde ela deve ficar */
+    left: 50%;
+    transform: translateX(-50%); /* centraliza horizontalmente */
+    width: 100%;           /* largura da linha */
+    z-index: 10;          /* fica acima do fundo */
+}
+
+.divisoria hr {
+    width: 100%;
+    border: none;
+    border-top: 2px solid #C0C0C0;
+    margin: 0;
+}
+
+.box {
+    position: relative;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    min-height: inherit;
+}
+
+.box-img {
+    position: absolute;
+    inset: 0;
+    background: url('../img/bg1.png') no-repeat center center;
+    background-size: cover;
+    z-index: 0;
+
+    display: grid; /* grid apenas para organizar os filhos */
+    justify-content: center; /* centraliza horizontalmente o grid */
+    align-content: center; /* centraliza verticalmente dentro da área */
+    gap: 0px; /* espaçamento entre cards */
+    padding: 0; /* não “empurra” o fundo */
+}
+
+/* Regras */
+
+.regras{
+    padding: 70px 70px;
+    margin: 0 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.conteudoregras{
+    max-width: 1500px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 40px 60px;
+    background-color: #5e3519;
+    border-radius: 20px;
+}
+
+.conteudoregras h1{
+    font-size: 38px;
+}
+
+.conteudoregras h3{
+    font-size: 28px;
+}
+
+/* Resolucao */
+
+@media only screen and (max-width: 1366px) {
+
+    .background {
+    min-height: 750vh;
+    }
+
+    .conteudoregras h1{
+    font-size: 36px;
+    }
+
+    .conteudoregras h3{
+    font-size: 26px;
+    }
+
+}
+
+@media only screen and (max-width: 1280px) {
+
+    .background {
+    min-height: 680vh;
+    }
+
+    .conteudoregras h1{
+    font-size: 38px;
+    }
+
+    .conteudoregras h3{
+    font-size: 28px;
+    }
+
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .background {
+    min-height: 500vh;
+    }
+
+    .conteudoregras h1{
+    font-size: 38px;
+    }
+
+    .conteudoregras h3{
+    font-size: 28px;
+    }
+
+}
+
+@media only screen and (max-width: 430px) {
+
+    .background {
+    min-height: 680vh;
+    }
+
+    .regras{        
+    padding: 20px 0;
+    margin: 10px;
+    }
+
+    .conteudoregras{
+    padding: 20px 10px;
+    border-radius: 10px;
+    }
+
+    .conteudoregras h1{
+    font-size: 31px;
+    }
+
+    .conteudoregras h3{
+    font-size: 21px;
+    }
+}

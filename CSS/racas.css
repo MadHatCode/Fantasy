@@ -1,68 +1,146 @@
-/* Divisoria */
-
-.divisoria{
-    text-align: center;
-    width: 100%;
-    margin-top: -16px;
-}
-
 /* Background */
 
-.background{
+.background {
     width: 100%;
     min-height: 100vh;
     position: relative;
     overflow: hidden;
 }
 
+.divisoria {
+    position: absolute;
+    top: 0px;
+    /* ajuste a altura onde ela deve ficar */
+    left: 50%;
+    transform: translateX(-50%);
+    /* centraliza horizontalmente */
+    width: 100%;
+    /* largura da linha */
+    z-index: 10;
+    /* fica acima do fundo */
+}
+
+.divisoria hr {
+    width: 100%;
+    border: none;
+    border-top: 2px solid #C0C0C0;
+    margin: 0;
+}
+
 .box {
-  position: relative;
-  display: grid;
-  place-items: center; /* centraliza o conteúdo */
-  padding: 0;
-  min-height: inherit; /* acompanha a altura da .background */
+    position: relative;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    min-height: inherit;
 }
 
 .box-img {
-  position: absolute;
-  inset: 0;
-  background: url('../img/bg1.jpg') no-repeat center center;
-  background-size: cover;
-  z-index: 0;
+    position: absolute;
+    inset: 0;
+    background: url('../img/bg1.png') no-repeat center center;
+    background-size: cover;
+    z-index: 0;
+
+    /*
+    display: grid; * grid apenas para organizar os filhos *
+    justify-content: center; /* centraliza horizontalmente o grid *
+    align-content: center; /* centraliza verticalmente dentro da área *
+    gap: 0px; /* espaçamento entre cards *
+    padding: 0; /* não “empurra” o fundo */
 }
 
-/* Race */
+/* Raças */
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.inner {
+    --w: 200px;
+    --h: 250px;
+    --translateZ: calc((var(--w) + var(--h)) + 0px);
+    --rotateX: -15deg;
+    --perspective: 1000px;
+    position: absolute;
+    width: var(--w);
+    height: var(--h);
+    top: 25%;
+    left: calc(50% - (var(--w) / 2) - 2.5px);
+    z-index: 2;
+    transform-style: preserve-3d;
+    transform: perspective(var(--perspective));
+    animation: rotating 20s linear infinite;
+    /* */
+}
+
+@keyframes rotating {
+    from {
+        transform: perspective(var(--perspective)) rotateX(var(--rotateX)) rotateY(0);
+    }
+
+    to {
+        transform: perspective(var(--perspective)) rotateX(var(--rotateX)) rotateY(1turn);
+    }
+}
+
+.racecard {
+    position: absolute;
+    border: 2px solid rgba(var(--color-card));
+    border-radius: 12px;
+    overflow: hidden;
+    inset: 0;
+    transform: rotateY(calc((360deg / var(--quantity)) * var(--index))) translateZ(var(--translateZ));
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: #0000 radial-gradient(circle,
+        rgba(var(--color-card), 0.2) 0%,
+        rgba(var(--color-card), 0.6) 80%,
+        rgba(var(--color-card), 0.9) 100%);
+}
 
 
-
-/* Notebook */
+/* Resolucao */
 
 @media only screen and (max-width: 1024px) {
 
-    .box{
-        height: 693px;
+    .regras {
+        padding: 20px 0;
+        margin: 10px;
     }
-}
 
-/* Mobile */
+    .conteudoregras {
+        padding: 20px 10px;
+        border-radius: 10px;
+    }
+
+}
 
 @media only screen and (max-width: 430px) {
 
-    h1{
-        font-size: 18px;
-    }
-
-    h3{
-		font-size: 45px;
-	}
-
-    .box{
-        height: 550px;
-        padding: 0;
-    }
-
-    .regras{        
+    .regras {
         padding: 20px 0;
-        margin: 10px; 
+        margin: 10px;
     }
+
+    .conteudoregras {
+        padding: 20px 10px;
+        border-radius: 10px;
+    }
+
+    .conteudoregras h1 {
+        font-size: 25px;
+    }
+
 }
