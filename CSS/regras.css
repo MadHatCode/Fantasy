@@ -74,10 +74,26 @@
 
 /* Resolucao */
 
+@media only screen and (max-width: 1600px) {
+
+    .background {
+    min-height: 700vh;
+    }
+
+    .conteudoregras h1{
+    font-size: 36px;
+    }
+
+    .conteudoregras h3{
+    font-size: 26px;
+    }
+
+}
+
 @media only screen and (max-width: 1366px) {
 
     .background {
-    min-height: 750vh;
+    min-height: 700vh;
     }
 
     .conteudoregras h1{
