@@ -2,14 +2,18 @@
 
 .background {
     width: 100%;
-    min-height: 100vh;
+    min-height: auto;
     position: relative;
     overflow: hidden;
+    padding-top: 40px;  /* espaço para a .divisoria absoluta */
+    padding-bottom: 60px; /* garante respiro sobre o footer */
+    background: url('../img/bg1.png') center / cover no-repeat;
+    background-attachment: fixed;
 }
 
 .divisoria {
     position: absolute;
-    top: 0px;           /* ajuste a altura onde ela deve ficar */
+    top: 0;
     left: 50%;
     transform: translateX(-50%); /* centraliza horizontalmente */
     width: 100%;           /* largura da linha */
@@ -25,25 +29,22 @@
 
 .box {
     position: relative;
-    display: grid;
-    place-items: center;
-    padding: 0;
-    min-height: inherit;
+    display: block;
+    padding: 0 16px;
 }
 
 .box-img {
-    position: absolute;
-    inset: 0;
-    background: url('../img/bg1.png') no-repeat center center;
-    background-size: cover;
-    z-index: 0;
+    position: relative;
+    max-width: 1280px; /* largura máxima da área dos cards */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 400px));
 
-    display: grid; /* grid apenas para organizar os filhos */
-    grid-template-columns: repeat(3, 400px); /* 2 colunas (largura fixa dos cards)*/
-    justify-content: center; /* centraliza horizontalmente o grid */
-    align-content: center; /* centraliza verticalmente dentro da área */
-    gap: 0px; /* espaçamento entre cards */
-    padding: 0; /* não “empurra” o fundo */
+    justify-content: center;
+    align-content: start; 
+    gap: 40px; /* espaçamento entre cards */
+    padding: 40px 0;
+    margin: 0 auto;
+    background: none !important
 }
 
 /* Book */

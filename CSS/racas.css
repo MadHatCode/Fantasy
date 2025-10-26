@@ -2,22 +2,22 @@
 
 .background {
     width: 100%;
-    min-height: 100vh;
+    min-height: auto;
     position: relative;
     overflow: hidden;
+    padding-top: 40px;  /* espaço para a .divisoria absoluta */
+    padding-bottom: 60px; /* garante respiro sobre o footer */
+    background: url('../img/bg1.png') center / cover no-repeat;
+    background-attachment: fixed;
 }
 
 .divisoria {
     position: absolute;
-    top: 0px;
-    /* ajuste a altura onde ela deve ficar */
+    top: 0;
     left: 50%;
-    transform: translateX(-50%);
-    /* centraliza horizontalmente */
-    width: 100%;
-    /* largura da linha */
-    z-index: 10;
-    /* fica acima do fundo */
+    transform: translateX(-50%); /* centraliza horizontalmente */
+    width: 100%;           /* largura da linha */
+    z-index: 10;          /* fica acima do fundo */
 }
 
 .divisoria hr {
@@ -29,87 +29,127 @@
 
 .box {
     position: relative;
-    display: grid;
-    place-items: center;
-    padding: 0;
-    min-height: inherit;
+    display: block;
+    padding: 0 16px;
 }
 
 .box-img {
-    position: absolute;
-    inset: 0;
-    background: url('../img/bg1.png') no-repeat center center;
-    background-size: cover;
-    z-index: 0;
+    position: relative;
+    max-width: 1280px; /* largura máxima da área dos cards */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 400px));
 
-    /*
-    display: grid; * grid apenas para organizar os filhos *
-    justify-content: center; /* centraliza horizontalmente o grid *
-    align-content: center; /* centraliza verticalmente dentro da área *
-    gap: 0px; /* espaçamento entre cards *
-    padding: 0; /* não “empurra” o fundo */
+    justify-content: center;
+    align-content: start; 
+    gap: 80px; /* espaçamento entre cards */
+    padding: 40px 0;
+    margin: 0 auto;
+    background: none !important
 }
 
 /* Raças */
 
-.wrapper {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+:root {
+  --racecard-height: 400px;
+  --racecard-width: calc(var(--racecard-height) / 1.5);
 }
-
-.inner {
-    --w: 200px;
-    --h: 250px;
-    --translateZ: calc((var(--w) + var(--h)) + 0px);
-    --rotateX: -15deg;
-    --perspective: 1000px;
-    position: absolute;
-    width: var(--w);
-    height: var(--h);
-    top: 25%;
-    left: calc(50% - (var(--w) / 2) - 2.5px);
-    z-index: 2;
-    transform-style: preserve-3d;
-    transform: perspective(var(--perspective));
-    animation: rotating 20s linear infinite;
-    /* */
-}
-
-@keyframes rotating {
-    from {
-        transform: perspective(var(--perspective)) rotateX(var(--rotateX)) rotateY(0);
-    }
-
-    to {
-        transform: perspective(var(--perspective)) rotateX(var(--rotateX)) rotateY(1turn);
-    }
+* {
+  box-sizing: border-box;
 }
 
 .racecard {
-    position: absolute;
-    border: 2px solid rgba(var(--color-card));
-    border-radius: 12px;
-    overflow: hidden;
-    inset: 0;
-    transform: rotateY(calc((360deg / var(--quantity)) * var(--index))) translateZ(var(--translateZ));
+  width: var(--racecard-width);
+  height: var(--racecard-height);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 36px;
+  perspective: 2500px;
+  margin: 0 50px;
 }
 
-.img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    background: #0000 radial-gradient(circle,
-        rgba(var(--color-card), 0.2) 0%,
-        rgba(var(--color-card), 0.6) 80%,
-        rgba(var(--color-card), 0.9) 100%);
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
+.wrapper {
+  transition: all 0.5s;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.racecard:hover .wrapper {
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.wrapper::before,
+.wrapper::after {
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: 80px;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+}
+.wrapper::before {
+  top: 0;
+  height: 100%;
+  background-image: linear-gradient(
+    to top,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+.wrapper::after {
+  bottom: 0;
+  opacity: 1;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+
+.racecard:hover .wrapper::before,
+.wrapper::after {
+  opacity: 1;
+}
+
+.racecard:hover .wrapper::after {
+  height: 120px;
+}
+
+.title {
+  width: 100%;
+  transition: transform 0.5s;
+}
+
+.racecard:hover .title {
+  transform: translate3d(0%, -50px, 100px);
+}
+
+.character {
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: -1;
+}
+
+.racecard:hover .character {
+  opacity: 1;
+  transform: translate3d(0%, -30%, 100px);
+}
 
 /* Resolucao */
 
