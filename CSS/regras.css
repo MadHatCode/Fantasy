@@ -5,8 +5,8 @@
     min-height: auto;
     position: relative;
     overflow: hidden;
-    padding-top: 40px;  /* espaço para a .divisoria absoluta */
-    padding-bottom: 60px; /* garante respiro sobre o footer */
+    padding-top: 40px; 
+    padding-bottom: 60px; 
     background: url('../img/bg1.png') center / cover no-repeat;
     background-attachment: fixed;
 }
@@ -15,9 +15,9 @@
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translateX(-50%); /* centraliza horizontalmente */
-    width: 100%;           /* largura da linha */
-    z-index: 10;          /* fica acima do fundo */
+    transform: translateX(-50%); 
+    width: 100%;       
+    z-index: 10;          
 }
 
 .divisoria hr {
@@ -35,7 +35,7 @@
 
 .box-img {
     position: relative;
-    max-width: 1280px; /* largura máxima da área dos cards */
+    max-width: 1280px; 
     display: grid;
     /* grid-template-columns: repeat(auto-fit, minmax(280px, 400px)); */
 
@@ -62,8 +62,9 @@
     color: white;
     text-align: center;
     padding: 40px 60px;
-    background-color: #5e3519;
-    border-radius: 20px;
+    background-color: rgba(46, 31, 15, 0.85); 
+    backdrop-filter: blur(3px);
+    border-radius: 20px;    
 }
 
 .conteudoregras h1{

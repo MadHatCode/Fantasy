@@ -4,7 +4,7 @@
 
 h1 {
     font-family: "Skranji", system-ui;
-    color: #fff;
+    color: #ffffff;
     font-weight: 700;
     font-size: 60px;
     text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
@@ -12,14 +12,14 @@ h1 {
 
 h2 {
     font-family: "Cantora One", sans-serif;
-    color: #fff;
+    color: #ffffff;
     font-size: 25px;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
 }
 
 h3 {
     font-family: "Teko", sans-serif;
-    color: #fff;
+    color: #ffffff;
     font-size: 40px;
     text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 }
@@ -35,7 +35,7 @@ h3 {
 body {
     margin: 0;
     padding: 0;
-    background-color: #A16101;
+    background-color: #0A0804;
     margin-bottom: 0;
 }
 
@@ -57,7 +57,7 @@ header {
 header > a {                 
   display: block;
   width: max-content;        
-  margin: 0 auto;            /* centraliza horizontalmente */
+  margin: 0 auto;
 }
 
 header .logo {
@@ -174,7 +174,7 @@ header .container {
     width: 35px;
     height: 5px;
     margin-bottom: 9px;
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     border-radius: 3px;
     transition: all ease .2s;
     display: none;
@@ -207,7 +207,7 @@ header .container {
 
 .main{
     position: relative;
-    background-color: #1C1C1C;
+    background-color: #0A0804;
     width: 100%;
     display: flex; 
     flex-direction: column;
@@ -223,13 +223,13 @@ header .container {
     text-align: center;
     justify-content: center;
     align-items: center;
-    color: #f7f6f1;
+    color: #FFFFFF;
     font-size: 20px;
     padding: 70px 0;
 }
 
 .footer a {
-    color: #ffffff;
+    color: #FFFFFF;
     margin-left: .5rem;
     margin-right: .5rem;
     font-size: 2.8rem;
@@ -265,13 +265,13 @@ header .container {
 }
 
 .footer-text p {
-  color: #f7f6f1;
+  color: #FFFFFF;
   font-size: 1rem;
   margin: 0;
 }
 
 .footer .privacy-link {
-  color: #f7f6f1;
+  color: #FFFFFF;
   font-size: 0.8rem;  
   text-decoration: none;
   transition: all 0.3s ease;
@@ -369,24 +369,16 @@ header .container {
     padding-top: 50px;             
     }
 
-    .banner {
-    width: 100%;
-    height: 75vh; /* px se quiser mover de outras formas */
-    background-image: url(../img/bg0.jpg);
-    background-size: cover;
-    background-position: center top; /* onde ta TOP pode usar % */
-    }
-
     .content {
     padding-top: 520px;
     }
-
-    .content h1{
-    font-size: 30px;
-    }
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 1024px) {
+
+    .container {
+    display: none;
+    }
 
     header .logo {
     height: 3.5em;
@@ -406,7 +398,7 @@ header .container {
 
     .container ul {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;                    
     text-align: center;
     padding: 20px;
@@ -430,22 +422,14 @@ header .container {
     padding-top: 50px;             
     }
 
-    .banner {
-    width: 100%;
-    height: 75vh; /* px se quiser mover de outras formas */
-    background-image: url(../img/bg0.jpg);
-    background-size: cover;
-    background-position: center top; /* onde ta TOP pode usar % */
-    }
-
     .content {
-    padding-top: 520px;
+    padding-top: 300px;
     }
 
-    .content h1{
-    font-size: 30px;
-    }
-   
+}
+
+@media only screen and (max-width: 430px) {
+ 
     .footer-logo {
     width: 80px;
     margin-left: -15px;

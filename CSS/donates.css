@@ -1,0 +1,112 @@
+/* Background */
+
+.background {
+    width: 100%;
+    min-height: auto;
+    position: relative;
+    overflow: hidden;
+    padding-top: 40px;  /* espaço para a .divisoria absoluta */
+    padding-bottom: 60px; /* garante respiro sobre o footer */
+    background: url('../img/bg1.png') center / cover no-repeat;
+    background-attachment: fixed;
+}
+
+.divisoria {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* centraliza horizontalmente */
+    width: 100%;           /* largura da linha */
+    z-index: 10;          /* fica acima do fundo */
+}
+
+.divisoria hr {
+    width: 100%;
+    border: none;
+    border-top: 2px solid #C0C0C0;
+    margin: 0;
+}
+
+.box {
+    position: relative;
+    display: block;
+    padding: 0 16px;
+}
+
+.box-img {
+    position: relative;
+    max-width: 1280px; /* largura máxima da área dos cards */
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(280px, 400px)); */
+
+    justify-content: center;
+    align-content: start; 
+    gap: 80px; /* espaçamento entre cards */
+    padding: 40px 0;
+    margin: 0 auto;
+    background: none !important
+}
+
+/* Regras */
+
+.regras{
+    padding: 70px 70px;
+    margin: 0 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.conteudoregras{
+    max-width: 1500px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 40px 60px;
+    background-color: rgba(46, 31, 15, 0.85);
+    border-radius: 20px;
+}
+
+/* Resolucao */
+
+@media (max-width: 768px) {
+
+    .regras{        
+    padding: 20px 0;
+    margin: 10px;
+    }
+
+    .conteudoregras{
+    padding: 20px 10px;
+    border-radius: 10px;
+    }
+
+    .conteudoregras h1{
+    font-size: 30px;
+    }
+
+    .conteudoregras h3{
+    font-size: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 430px) {
+
+    .regras{        
+    padding: 20px 0;
+    margin: 10px;
+    }
+
+    .conteudoregras{
+    padding: 20px 10px;
+    border-radius: 10px;
+    }
+
+    .conteudoregras h1{
+    font-size: 30px;
+    }
+
+    .conteudoregras h3{
+    font-size: 20px;
+    }
+}

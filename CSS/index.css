@@ -25,7 +25,8 @@
     align-items: center;
     overflow: hidden;
     margin-bottom: -40px;
-    background-color: #8B4513;
+    background-color: rgba(46, 31, 15); 
+    
 }
 
 .AprBG {
@@ -38,9 +39,9 @@
 
 .conteudorole {
     display: block;
-    width: 550px;
+    width: 600px;
     text-align: center;
-    color: #f7f6f2; 
+    color: #F5E6CC; 
 }
 
 /* Resolucao */

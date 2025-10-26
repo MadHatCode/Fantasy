@@ -5,8 +5,8 @@
     min-height: auto;
     position: relative;
     overflow: hidden;
-    padding-top: 40px;  /* espaço para a .divisoria absoluta */
-    padding-bottom: 60px; /* garante respiro sobre o footer */
+    padding-top: 40px; 
+    padding-bottom: 60px; 
     background: url('../img/bg1.png') center / cover no-repeat;
     background-attachment: fixed;
 }
@@ -15,9 +15,9 @@
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translateX(-50%); /* centraliza horizontalmente */
-    width: 100%;           /* largura da linha */
-    z-index: 10;          /* fica acima do fundo */
+    transform: translateX(-50%); 
+    width: 100%;    
+    z-index: 10;        
 }
 
 .divisoria hr {
@@ -35,7 +35,7 @@
 
 .box-img {
     position: relative;
-    max-width: 1280px; /* largura máxima da área dos cards */
+    max-width: 1280px; 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 400px));
 
@@ -80,8 +80,9 @@
     transform: skew(19deg, -9deg);
 }
 
+
 .first .hero-description-bk {
-    background-image: linear-gradient(0deg, #d3891b, #004d81);
+    background-image: linear-gradient(0deg, #d3891b, #9e001a)
 }
 
 .second .hero-description-bk {
@@ -89,7 +90,7 @@
 }
 
 .third .hero-description-bk {
-    background-image: linear-gradient(0deg, #d3891b, #c23d00);
+    background-image: linear-gradient(0deg, #d3891b, #004d81);
 }
 
 .fourth .hero-description-bk {
@@ -97,19 +98,11 @@
 }
 
 .fifth .hero-description-bk {
-    background-image: linear-gradient(0deg, #d3891b, #4b00a1)
+    background-image: linear-gradient(0deg, #d3891b, #1b8800)
 }
 
 .sixth .hero-description-bk {
-    background-image: linear-gradient(0deg, #d3891b, #1b8800)
-}
-
-.seventh .hero-description-bk {
-    background-image: linear-gradient(0deg, #d3891b, #9e001a)
-}
-
-.eighth .hero-description-bk {
-    background-image: linear-gradient(0deg, #d3891b, #1b8800)
+    background-image: linear-gradient(0deg, #d3891b, #4b00a1)
 }
 
 .hero-logo {

@@ -5,8 +5,8 @@
     min-height: auto;
     position: relative;
     overflow: hidden;
-    padding-top: 40px;  /* espaço para a .divisoria absoluta */
-    padding-bottom: 60px; /* garante respiro sobre o footer */
+    padding-top: 40px; 
+    padding-bottom: 60px;
     background: url('../img/bg1.png') center / cover no-repeat;
     background-attachment: fixed;
 }
@@ -15,9 +15,9 @@
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translateX(-50%); /* centraliza horizontalmente */
-    width: 100%;           /* largura da linha */
-    z-index: 10;          /* fica acima do fundo */
+    transform: translateX(-50%);
+    width: 100%;          
+    z-index: 10; 
 }
 
 .divisoria hr {
@@ -35,7 +35,7 @@
 
 .box-img {
     position: relative;
-    max-width: 1280px; /* largura máxima da área dos cards */
+    max-width: 1280px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 400px));
 
@@ -155,53 +155,4 @@
         inset -7px 0 0 #dbdbdb,
         inset -8px 0 0 white,
         inset -9px 0 0 #dbdbdb;
-}
-
-
-/* Resolucao */
-
-@media only screen and (max-width: 1366px) {
-
-    .background {
-    min-height: 140vh;
-    }
-
-}
-
-@media only screen and (max-width: 1024px) {
-
-    .box-img {
-    grid-template-columns: repeat(2, 400px);
-    }
-
-}
-
-@media (max-width: 768px) {
-
-    .box-img {
-        grid-template-columns: repeat(1, 400px);
-        gap: 0px;
-    }
-
-    .background {
-    min-height: 180vh;
-    }
-
-    .hero {
-    margin: 0px 0px 20px 0px;
-    }
-
-}
-
-@media only screen and (max-width: 430px) {
-
-    .box-img {
-        grid-template-columns: repeat(1, 400px);
-        gap: 0px;
-    }
-
-    .background {
-    min-height: 200vh;
-    }
-
 }
