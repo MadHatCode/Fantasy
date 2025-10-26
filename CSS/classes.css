@@ -86,23 +86,23 @@
 }
 
 .second .hero-description-bk {
-    background-image: linear-gradient(0deg, #d3891b, #008141);
+    background-image: linear-gradient(0deg, #d3891b, #005281);
 }
 
 .third .hero-description-bk {
-    background-image: linear-gradient(0deg, #d3891b, #004d81);
+    background-image: linear-gradient(0deg, #d3891b, #008145);
 }
 
 .fourth .hero-description-bk {
-    background-image: linear-gradient(0deg, #d3891b, #a18900)
+    background-image: linear-gradient(0deg, #d3891b, #a15600)
 }
 
 .fifth .hero-description-bk {
-    background-image: linear-gradient(0deg, #d3891b, #1b8800)
+    background-image: linear-gradient(0deg, #d3891b, #4b00a1)
 }
 
 .sixth .hero-description-bk {
-    background-image: linear-gradient(0deg, #d3891b, #4b00a1)
+    background-image: linear-gradient(0deg, #d3891b, #1b8800)
 }
 
 .hero-logo {
