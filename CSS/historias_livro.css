@@ -138,43 +138,30 @@ div h5:not(:first-child)::first-letter {
 
 @media (max-width: 768px) {
 
-    .regras {
-        padding: 20px 0;
-        margin: 10px;
+    .inkTitle {
+    font-size: 2em;
     }
 
-    .conteudoregras {
-        padding: 20px 10px;
-        border-radius: 10px;
+    main h5 {
+    font-size: 29px;
     }
 
-    .conteudoregras h1 {
-        font-size: 30px;
+    .signature {
+    font-size: 29px;
     }
 
-    .conteudoregras h3 {
-        font-size: 20px;
+    #parchment {
+    width: 100%;
+    margin: 0;
     }
 
-}
-
-@media only screen and (max-width: 430px) {
-
-    .regras {
-        padding: 20px 0;
-        margin: 10px;
+    #containbook {
+    width: 100%;
+    padding: 2.5em;
     }
 
-    .conteudoregras {
-        padding: 20px 10px;
-        border-radius: 10px;
+    .cachet {
+    width: calc((200vw * 5) / 42);
     }
 
-    .conteudoregras h1 {
-        font-size: 30px;
-    }
-
-    .conteudoregras h3 {
-        font-size: 20px;
-    }
 }
