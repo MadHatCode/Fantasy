@@ -1,6 +1,11 @@
 /* Texto */
 
-@import url('https://fonts.googleapis.com/css2?family=Cantora+One&family=Skranji:wght@400;700&family=Teko:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Cantora+One&family=Pirata+One&family=Skranji:wght@400;700&family=Teko:wght@300..700&display=swap');
+
+@font-face {
+  font-family: Morris;
+  src: url(https://cdn.statically.io/gh/EmmesCodes/Tipografias/dae9f5bb/MorrisInitials.ttf);
+}
 
 h1 {
     font-family: "Skranji", system-ui;
@@ -22,6 +27,17 @@ h3 {
     color: #ffffff;
     font-size: 40px;
     text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+}
+
+h4 {
+    font-family: "Pirata One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h5 {
+    font-family: "Bilbo Swash Caps", cursive;
+    color: #7F3300;
 }
 
 /* Corpo */
