@@ -77,6 +77,36 @@
     url('../img/race2.png') center/cover no-repeat;
 }
 
+.cardrace.drow {
+    background: 
+    linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.1)),
+    url('../img/race3.png') center/cover no-repeat;
+}
+
+.cardrace.tiefling {
+    background: 
+    linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.1)),
+    url('../img/race4.png') center/cover no-repeat;
+}
+
+.cardrace.anao {
+    background: 
+    linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.1)),
+    url('../img/race5.png') center/cover no-repeat;
+}
+
+.cardrace.orc {
+    background: 
+    linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.1)),
+    url('../img/race6.png') center/cover no-repeat;
+}
+
+.cardrace.aasimar {
+    background: 
+    linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.1)),
+    url('../img/race7.png') center/cover no-repeat;
+}
+
 .cardrace::after {
     content: "";
     position: absolute;
