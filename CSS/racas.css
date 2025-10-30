@@ -5,7 +5,7 @@
     min-height: auto;
     position: relative;
     overflow: hidden;
-    padding-top: 40px;  /* espaço para a .divisoria absoluta */
+    padding-top: 40px;
     padding-bottom: 60px; /* garante respiro sobre o footer */
     background: url('../img/bg1.png') center / cover no-repeat;
     background-attachment: fixed;
@@ -15,9 +15,9 @@
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translateX(-50%); /* centraliza horizontalmente */
-    width: 100%;           /* largura da linha */
-    z-index: 10;          /* fica acima do fundo */
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 10;
 }
 
 .divisoria hr {
@@ -35,152 +35,143 @@
 
 .box-img {
     position: relative;
-    max-width: 1280px; /* largura máxima da área dos cards */
+    max-width: 900px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 400px));
-
+    grid-template-columns: repeat(2, 360px);
+    /* grid-template-columns: repeat(2, minmax(320px, 1fr)); max-width: 880px; */
     justify-content: center;
-    align-content: start; 
-    gap: 80px; /* espaçamento entre cards */
+    justify-items: center;
+    align-content: start;
+    gap: 40px; /* espaço entre os cards */
     padding: 40px 0;
     margin: 0 auto;
-    background: none !important
+    background: none !important;
 }
 
 /* Raças */
 
-:root {
-  --racecard-height: 400px;
-  --racecard-width: calc(var(--racecard-height) / 1.5);
-}
-* {
-  box-sizing: border-box;
-}
-
-.racecard {
-  width: var(--racecard-width);
-  height: var(--racecard-height);
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  padding: 0 36px;
-  perspective: 2500px;
-  margin: 0 50px;
+.cardrace {
+    position: relative;
+    width: 360px;
+    height: 460px;
+    border-radius: 12px;
+    padding: 1.25rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 10px;
+    transition: 0.5s ease;
+    color: white;
 }
 
-.cover-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.cardrace.humano {
+    background: 
+    linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.1)),
+    url('../img/race1.png') center/cover no-repeat;
 }
 
-.wrapper {
-  transition: all 0.5s;
-  position: absolute;
-  width: 100%;
-  z-index: -1;
+.cardrace.elfo {
+    background: 
+    linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.1)),
+    url('../img/race2.png') center/cover no-repeat;
 }
 
-.racecard:hover .wrapper {
-  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
-  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+.cardrace::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.5;
+    transition: 0.3s ease;
 }
 
-.wrapper::before,
-.wrapper::after {
+.cardrace:hover::after {
+    opacity: 0.25;
+}
+
+.cardrace::before {
   content: "";
-  opacity: 0;
-  width: 100%;
-  height: 80px;
-  transition: all 0.5s;
   position: absolute;
-  left: 0;
-}
-.wrapper::before {
-  top: 0;
-  height: 100%;
-  background-image: linear-gradient(
-    to top,
-    transparent 46%,
-    rgba(12, 13, 19, 0.5) 68%,
-    rgba(12, 13, 19) 97%
-  );
-}
-.wrapper::after {
-  bottom: 0;
-  opacity: 1;
-  background-image: linear-gradient(
-    to bottom,
-    transparent 46%,
-    rgba(12, 13, 19, 0.5) 68%,
-    rgba(12, 13, 19) 97%
-  );
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* escurece a imagem */
+  z-index: 1;
 }
 
-.racecard:hover .wrapper::before,
-.wrapper::after {
-  opacity: 1;
+.cardHeader {
+    text-transform: uppercase;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.5s ease;
+    margin: 0 auto;
 }
 
-.racecard:hover .wrapper::after {
-  height: 120px;
+.cardHeader::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    transform: translateX(-50%);
+    width: 60%; /* tamanho da linha */
+    height: 3px;
+    background: aqua;
+    opacity: 0;
 }
 
-.title {
-  width: 100%;
-  transition: transform 0.5s;
+.details {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    transform: translateY(70%);
+    transition: all 0.5s ease;
 }
 
-.racecard:hover .title {
-  transform: translate3d(0%, -50px, 100px);
+.cardrace:hover .details {
+    transform: translateY(0%);
+    transition-delay: 0.5s;
 }
 
-.character {
-  width: 100%;
-  opacity: 0;
-  transition: all 0.5s;
-  position: absolute;
-  z-index: -1;
+.cardrace:hover .cardHeader::after {
+    transition: 0.5s ease;
+    opacity: 1;
 }
 
-.racecard:hover .character {
-  opacity: 1;
-  transform: translate3d(0%, -30%, 100px);
+.cardrace:hover {
+    transform: scale(1.06);
+    border-radius: 15px;
+}
+
+.cardText {
+    line-height: 1.4;
+    font-size: 0.975rem;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;  /* animação suave */
+    margin-top: 10px;
+}
+
+.cardrace:hover .cardText {
+    opacity: 1; 
+    max-height: 300px;          /* altura suficiente para mostrar o texto */
+    transition-delay: 0.3s;     /* aparece um pouco depois do movimento */
 }
 
 /* Resolucao */
 
-@media only screen and (max-width: 1024px) {
-
-    .regras {
-        padding: 20px 0;
-        margin: 10px;
+@media (max-width: 768px) {
+    .box-img {
+        grid-template-columns: 1fr; /* vira 1 coluna */
+        max-width: 100%;
+        padding: 24px 0;
     }
 
-    .conteudoregras {
-        padding: 20px 10px;
-        border-radius: 10px;
+    .cardrace {
+        width: 92vw;       /* ocupa quase toda a largura */
+        max-width: 480px;  /* mas não ultrapassa */
+        height: auto;      /* deixa a altura fluir no mobile */
+        min-height: 420px; /* ainda garante espaço */
     }
-
-}
-
-@media only screen and (max-width: 430px) {
-
-    .regras {
-        padding: 20px 0;
-        margin: 10px;
-    }
-
-    .conteudoregras {
-        padding: 20px 10px;
-        border-radius: 10px;
-    }
-
-    .conteudoregras h1 {
-        font-size: 25px;
-    }
-
 }
