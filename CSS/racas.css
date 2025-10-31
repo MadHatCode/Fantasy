@@ -193,15 +193,15 @@
 
 @media (max-width: 768px) {
     .box-img {
-        grid-template-columns: 1fr; /* vira 1 coluna */
+        grid-template-columns: 1fr;
         max-width: 100%;
         padding: 24px 0;
     }
 
     .cardrace {
-        width: 92vw;       /* ocupa quase toda a largura */
-        max-width: 480px;  /* mas não ultrapassa */
-        height: auto;      /* deixa a altura fluir no mobile */
-        min-height: 420px; /* ainda garante espaço */
+        width: 92vw;  
+        max-width: 480px;  
+        height: auto;   
+        min-height: 420px; 
     }
 }
