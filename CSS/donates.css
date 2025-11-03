@@ -37,7 +37,7 @@
     position: relative;
     max-width: 1280px; /* largura máxima da área dos cards */
     display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(280px, 400px)); */
+    grid-template-columns: repeat(3, 260px);
 
     justify-content: center;
     align-content: start; 
@@ -47,66 +47,288 @@
     background: none !important
 }
 
-/* Regras */
+.box-img2 {
+    position: relative;
+    max-width: 1280px; /* largura máxima da área dos cards */
+    display: grid;
+    grid-template-columns: 1fr;
 
-.regras{
-    padding: 70px 70px;
-    margin: 0 50px;
-    display: flex;
     justify-content: center;
+    align-content: start; 
+    gap: 40px; /* espaçamento entre cards */
+    padding: 40px 0;
+    margin: 0 auto;
+    background: none !important
 }
 
-.conteudoregras{
-    max-width: 1500px;
-    width: 100%;
-    color: white;
+.box-img3 {
+    position: relative;
+    max-width: 1280px; /* largura máxima da área dos cards */
+    display: grid;
+        grid-template-columns: repeat(2, 260px);
+
+    justify-content: center;
+    align-content: start; 
+    gap: 80px; /* espaçamento entre cards */
+    padding: 40px 0;
+    margin: 0 auto;
+    background: none !important
+}
+
+/* Segunda Divisoria */
+
+.section-hr{
+    width: 90%;
+    height: 2px;
+    border: 0;
+    margin: 40px auto;
+    background: linear-gradient(90deg, transparent, #c0c0c0, transparent);
+    box-shadow: 0 0 6px rgba(192,192,192,.6);
+}
+
+.section-title {
     text-align: center;
-    padding: 40px 60px;
-    background-color: rgba(46, 31, 15, 0.85);
-    border-radius: 20px;
+    font-family: "Skranji", system-ui;
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: 700;
+    margin: 40px 0 20px;
+    text-shadow: 1px 1px 2px black, 0 0 1em #000, 0 0 0.2em #000;
+}
+
+/* Donate */
+
+.card_donate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 260px;
+    padding: 20px 1px;
+    margin: 10px 0;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 15px -3px rgba(243, 117, 33, 0.4),0 4px 6px -4px rgba(243, 135, 33, 0.4);
+    border-radius: 10px;
+    background-color: #6B6ECC;
+    background: linear-gradient(45deg, #0A0804 0%, #8B4513 100%);
+}
+
+.content_donate {
+    padding: 20px;
+}
+
+.content_donate .price {
+    color: white;
+    font-weight: 800;
+    font-size: 50px;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.42);
+}
+
+.content_donate .description {
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.content_donate .title {
+    font-weight: 800;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.64);
+    margin-top: 10px;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+/* Card Grande */
+
+.card-container {
+    width: 100%;
+    max-width: 500px; 
+    background: linear-gradient(
+        to top right,
+        #8B4513,
+        #e9cc2a 40%,
+        #D4A017 65%,
+        #b65916 100%
+    );
+    padding: 4px;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.card-container .card-content {
+    width: 100%;
+    height: 100%;
+    background-color: #0A0804;
+    border-radius: 30px;
+    color: #838383;
+    font-size: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+    align-items: center;
+}
+
+.card-container .card-content .plain :nth-child(1) {
+    font-size: 36px;
+    color: #fff;
+}
+
+.card-container .card-content .description {
+    color: #bab9b9;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-container .card-content .card-separate {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    width: 100%;
+    font-size: 10px;
+    color: rgb(131, 131, 131, 0.5);
+}
+
+.card-container .card-content .card-separate .separate {
+    width: 100%;
+    height: 1px;
+    background-color: rgb(131, 131, 131, 0.5);
+}
+
+.card-container .card-content .card-list-features {
+    color: #bab9b9;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card-container .card-content .card-list-features .option {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.card-container .card-content .card-list-features .option p{
+    margin-top: 14px;
+}
+
+/*  Tabela */
+
+.tabela-pacotes {
+    display: flex;
+    justify-content: center;
+    margin: 8px 0 0;
+    overflow-x: auto;
+}
+
+.tabela-fantasy {
+    width: 100%;
+    max-width: none;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(20, 20, 20, 0.8);
+    box-shadow: 0 0 10px #000;
+    table-layout: fixed;
+    word-wrap: break-word;
+    border: 0;                 /* sem borda branca externa */
+    border-collapse: separate; /* mantém bordas das células separadas */
+    border-spacing: 0;
+    background-clip: padding-box;
+}
+
+.tabela-fantasy th, .tabela-fantasy td {
+    border: 1px solid rgba(131,131,131,0.5);
+    padding: 12px;
+    font-family: "Teko", sans-serif;
+    font-size: 18px;
+}
+
+.tabela-fantasy th {
+    background-color: rgba(0,0,0,0.8);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tabela-fantasy td:first-child {
+    background-color: rgba(0,0,0,0.8);
+    font-weight: bold;
+    width: 120px;
 }
 
 /* Resolucao */
 
-@media (max-width: 768px) {
-
-    .regras{        
-    padding: 20px 0;
-    margin: 10px;
-    }
-
-    .conteudoregras{
-    padding: 20px 10px;
-    border-radius: 10px;
-    }
-
-    .conteudoregras h1{
-    font-size: 30px;
-    }
-
-    .conteudoregras h3{
-    font-size: 20px;
-    }
-
+@media (max-width: 1024px){
+    .box-img, .box-img3{ gap: 60px; }
+    .box-img2{ gap: 32px; }
 }
 
-@media only screen and (max-width: 430px) {
+@media (max-width: 768px){
 
-    .regras{        
-    padding: 20px 0;
-    margin: 10px;
+    .box-img,
+    .box-img3{
+        grid-template-columns: 1fr;
+        gap: 40px;
+        justify-items: center;   /* centraliza cada card */
     }
 
-    .conteudoregras{
-    padding: 20px 10px;
-    border-radius: 10px;
+    .card_donate{
+        width: 100%;
+        max-width: 360px; /* limite visual pra não estourar */
     }
 
-    .conteudoregras h1{
-    font-size: 30px;
+    .box-img2{
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 24px;
     }
 
-    .conteudoregras h3{
-    font-size: 20px;
+    .card-container{
+        max-width: 420px;  /* ↓ menor no mobile */
+        padding: 3px;      /* borda dourada mais fina */
+        border-radius: 22px;
     }
+    .card-container .card-content{
+        padding: 16px;
+        border-radius: 18px;
+        text-align: center;
+        align-items: center;
+    }
+    .card-container .card-content .plain :nth-child(1){
+        font-size: 24px;   /* valor menor */
+    }
+    .card-container .card-content .description{
+        font-size: 14px;
+        line-height: 1.45;
+    }
+
+    .section-title{
+        font-size: 36px;
+        margin: 28px 0 14px;
+    }
+
+    .tabela-pacotes{ overflow-x: auto; }
+    .tabela-fantasy{
+        min-width: 560px;
+    }
+    .tabela-fantasy th, .tabela-fantasy td{
+        font-size: 16px;
+        padding: 8px;
+        line-height: 1.35;
+    }
+}
+
+@media (max-width: 430px){
+    .card-container{ max-width: 360px; border-radius: 20px; }
+    .card-container .card-content{ padding: 14px; }
+    .card-container .card-content .plain :nth-child(1){ font-size: 22px; }
+
+    .section-title{ font-size: 32px; }
+
+
+    .box-img, .box-img3{ gap: 28px; }
 }
