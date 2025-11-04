@@ -62,7 +62,7 @@
     color: white;
     text-align: center;
     padding: 40px 60px;
-    background-color: rgba(46, 31, 15, 0.85); 
+    background-color: #0A0804; 
     backdrop-filter: blur(3px);
     border-radius: 20px;    
 }
@@ -73,6 +73,7 @@
 
 .conteudoregras h3{
     font-size: 28px;
+    font-weight: 400;
 }
 
 /* Resolucao */
