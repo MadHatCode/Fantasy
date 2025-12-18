@@ -112,7 +112,6 @@
 }
 .wrapper::after {
     bottom: 0;
-    opacity: 1;
     background-image: linear-gradient(
         to bottom,
         transparent 46%,
@@ -122,7 +121,7 @@
 }
 
 .classcard:hover .wrapper::before,
-.wrapper::after {
+.classcard:hover .wrapper::after {
     opacity: 1;
 }
 
@@ -131,13 +130,13 @@
 }
 
 .title {
-    width: 60%; /* Reduz o tamanho do título */
+    width: 85%; /* Reduz o tamanho do título */
     margin-top: 12px;
     z-index: 3;
     position: relative;
     text-align: center;
     transition: transform 0.5s;
-    margin-top: -80px; /* Move para cima */
+    margin-top: -150px; /* Move para cima */
 }
 
 .classcard:hover .title {
