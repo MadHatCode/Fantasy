@@ -107,6 +107,12 @@
     url('../img/race7.png') center/cover no-repeat;
 }
 
+.cardrace.feral {
+    background: 
+    linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.1)),
+    url('../img/race8.png') center/cover no-repeat;
+}
+
 .cardrace::after {
     content: "";
     position: absolute;
