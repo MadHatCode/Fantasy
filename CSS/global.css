@@ -321,6 +321,43 @@ header .container {
     color: #826334;
 }
 
+/* Allowlist */
+
+.allowlist-overlay-item {
+    position: relative;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: max-content;
+}
+
+.allowlist-fake-button {
+    font-family: "Cantora One", sans-serif;
+    color: #ffffff;
+    font-size: 31px;
+    letter-spacing: 2px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    transition: 0.4s;
+    pointer-events: none;
+}
+
+.allowlist-overlay-item:hover .allowlist-fake-button {
+    color: #8B4513;
+}
+
+.allowlist-real-widget {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.allowlist-real-widget * {
+    cursor: pointer !important;
+}
+
 /* Resolucao */
 
 @media only screen and (max-width: 1366px) {
