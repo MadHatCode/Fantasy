@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.conteudoregras h2{
+    font-family: "Skranji", system-ui;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 35px;
+}
+
+.conteudoregras p{
+    font-family: "Roboto", sans-serif;
+    color: #ffffffe5;
+    font-size: 20px;
+}
+
 /* Background */
 
 .background {
@@ -62,9 +77,11 @@
     color: white;
     text-align: center;
     padding: 40px 60px;
-    background-color: #0A0804; 
+    background-color: #1a1a1a; 
     backdrop-filter: blur(3px);
-    border-radius: 20px;    
+    border-radius: 20px;
+    box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);    
 }
 
 .conteudoregras h1{
