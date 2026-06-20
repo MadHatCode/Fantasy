@@ -8,7 +8,7 @@ Um site com finalidade de apresentar o conteúdo feito para o servidor Fantasy.<
 
 <p align="center">
     <a href="https://discord.gg/GbEnCjtDMy"><img src="https://img.shields.io/discord/829042103295410197?color=%237289DA&label=MHC&logo=discord&logoColor=white" alt="Discord"></a>
-    <a href="https://www.repostatus.org/#wip"><img src="https://www.repostatus.org/badges/latest/wip.svg" alt="Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public." /></a>
+    <a href="https://www.repostatus.org/#inactive"><img src="https://www.repostatus.org/badges/latest/inactive.svg" alt="Status"/>
 </p>
 
 #
