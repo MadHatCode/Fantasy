@@ -86,7 +86,7 @@ header .logo {
 }
 
 header .container {
-    padding: 10px 100px;
+    padding: 10px 120px;
     background-color: rgba(36, 36, 36, 0);
 }
 
@@ -277,7 +277,7 @@ header .container {
   display: flex;
   flex-direction: column;    /* empilha p e link */
   align-items: flex-start;   /* textos alinhados à esquerda */
-  line-height: 2;
+  line-height: 0.8;
 }
 
 .footer-text p {
@@ -295,6 +295,10 @@ header .container {
 
 .footer .privacy-link:hover {
   text-decoration: underline;
+}
+
+.discord-link{
+  color: #ffffff;
 }
 
 /* Voltar */
